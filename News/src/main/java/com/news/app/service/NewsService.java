@@ -29,7 +29,7 @@ public class NewsService extends MappingJackson2HttpMessageConverter {
 	
 	    public static List<Example> sendRefinedUpdate(String country,String category,String source123) throws IOException {	
 	    		    	 
-	    	String urlString = "https://newsapi.org/v2/top-headlines?apiKey="+"5ee76085768547ae9b4f58e25a78a7a9" +"&country="+country+"&category="+category+"&source="+source123+"";
+	    	String urlString = "https://newsapi.org/v2/top-headlines?apiKey="+"8a4e509024ef4b17bf5f61355ff45144" +"&country="+country+"&category="+category+"&source="+source123+"";
 	    	
 	    	 RestTemplate restTemplate = new RestTemplate();
 	    	    String result = restTemplate.getForObject(urlString, String.class);	    	
@@ -122,9 +122,9 @@ public class NewsService extends MappingJackson2HttpMessageConverter {
 			        return newsList;
     }
 	    
-	    public static List<Example> sendCategorizedUpdate(String country,String category) throws IOException {
+	    public static List<Example> sendCategorizedUpdate(String country) throws IOException {
 	    	
-	    	String urlString = "https://newsapi.org/v2/top-headlines?apiKey=a24d98f562554d239d33c2f9d3da0983&country="+country+"&category="+category+"";
+	    	String urlString = "https://newsapi.org/v2/top-headlines?apiKey=8a4e509024ef4b17bf5f61355ff45144&country="+country+"&category="+""+"";
 	    	
 	    	 RestTemplate restTemplate = new RestTemplate();
 	    	    String result = restTemplate.getForObject(urlString, String.class);	    	
@@ -220,7 +220,7 @@ public class NewsService extends MappingJackson2HttpMessageConverter {
 	    
 	    public static List<Example> sendSourcedUpdate(String country,String source123) throws IOException {
 	    	
-	    	String urlString = "https://newsapi.org/v2/top-headlines?apiKey=a24d98f562554d239d33c2f9d3da0983&country="+country+"&source="+source123+"";
+	    	String urlString = "https://newsapi.org/v2/top-headlines?apiKey=8a4e509024ef4b17bf5f61355ff45144&country="+country+"&source="+source123+"";
 	    	
 	    	 RestTemplate restTemplate = new RestTemplate();
 	    	    String result = restTemplate.getForObject(urlString, String.class);	    	
